@@ -17,4 +17,6 @@ data class Article(
         var content: String? = null,
 
         @Enumerated(value = EnumType.STRING)
-        var targetGroup: UserGroup? = null)
+        @ElementCollection(targetClass = UserGroup::class)
+        @CollectionTable(name = "ARTICLE_TARGETGROUPS")
+        var targetGroup: MutableSet<UserGroup>? = null) : BaseEntity()

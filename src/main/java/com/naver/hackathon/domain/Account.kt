@@ -19,4 +19,4 @@ data class Account(
         @ElementCollection(targetClass = UserGroup::class)
         @CollectionTable(name = "ACCOUNT_GROUP_REL")
         @Enumerated(value = EnumType.STRING)
-        var groups: Set<UserGroup> = emptySet())
+        var groups: MutableSet<UserGroup>? = null)
