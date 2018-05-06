@@ -16,6 +16,15 @@ spring:
     hibernate:
       ddl-auto: update
 
+---
+
+spring:
+  profiles: local-test
+
+logging:
+  level:
+    root: INFO
+
 
 
 
